@@ -85,10 +85,11 @@ This spins up the backend and database automatically.
 👥 Contributors
 
 @Codewithkenny – Developer
+@Rajatsoni5 Rajat Soni 
 
 🪄 License
 
-This project is licensed under the MIT License
+ This project is licensed under the MIT License © 2025 Olapoju Agbomeji.
 
 
 
