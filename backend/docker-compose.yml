@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    container_name: pocketmoni_db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Morayoluwa@2020
+      POSTGRES_DB: pocketmoni
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  backend:
+    build: .
+    container_name: pocketmoni_backend
+    restart: always
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgres://postgres:Morayoluwa@2020@db:5432/pocketmoni
+      JWT_SECRET: your_jwt_secret_key
+      NODE_ENV: development
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    command: npm run start:dev
+
+volumes:
+  pgdata:
