@@ -84,7 +84,7 @@ This spins up the backend and database automatically.
 
 👥 Contributors
 
-@Codewithkenny – Developer
+@Codewithkenny – Developer <br/>
 @Rajatsoni5 Rajat Soni 
 
 🪄 License
